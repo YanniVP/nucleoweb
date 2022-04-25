@@ -20,3 +20,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req,res) => {
+    res.render('index',{title:'Plantilla basic'});
+});
+module.exports = router;
